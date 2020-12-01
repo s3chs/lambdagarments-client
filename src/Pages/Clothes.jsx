@@ -30,7 +30,7 @@ export default class Clothes extends Component {
             <Link key={garment.name} to={`/clothes/${garment._id}`}>
               <img
                 style={{ maxWidth: 130 }}
-                src={garment.images[0]}
+                src={garment.images[0]}    
                 alt="garm-pic"
               />
             </Link>

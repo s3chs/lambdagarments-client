@@ -28,6 +28,19 @@ export default class AddGarm extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
+    // FORM DATA FOR CLOUDINARY //
+
+    // const fd = new FormData();
+    // fd.append("images", this.state.images);
+    // fd.append("name", this.state.name);
+    // fd.append("size", this.state.size);
+    // fd.append("brand", this.state.brand);
+    // fd.append("pittopit", this.state.pittopit);
+    // fd.append("coltobot", this.state.coltobot);
+    // fd.append("description", this.state.description);
+
+    ////
+
     apiHandler
       .createGarm("/clothes", this.state)
       .then((apiRes) => {
@@ -58,24 +71,47 @@ export default class AddGarm extends Component {
   };
 
   handleChangePicture = (event) => {
+    const copy = [...this.state.images];
     const value = event.target.value;
 
     if (event.target.id === "picZero") {
-      this.state.images[0] = value;
+      copy[0] = value;
+      this.setState({
+        images: copy,
+      });
+      console.log(copy, "first copy");
     } else if (event.target.id === "picOne") {
-      this.state.images[1] = value;
+      copy[1] = value;
+      this.setState({
+        images: [...copy],
+      });
+      console.log(copy, "second copy");
     } else if (event.target.id === "picTwo") {
-      this.state.images[2] = value;
+      copy[2] = value;
+      this.setState({
+        images: [...copy],
+      });
+      console.log(copy, "final copy");
     } else {
-      this.state.images = [];
+      console.log("somethings wrong dawg");
     }
-
     console.log(this.state.images);
   };
+
+  // /CLOUDINARY SETUP/////
+  // handleChangePicture = (event) => {
+  //   const value = event.target.files;
+
+  //   this.setState({
+  //     images: value,
+  //   });
+  //   console.log(this.state.images);
+  // };
 
   render() {
     return (
       <div>
+        <pre>{JSON.stringify(this.state, null, 2)}</pre>
         <form onSubmit={this.handleSubmit}>
           <label>First Picture</label>
           <input

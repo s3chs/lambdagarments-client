@@ -60,18 +60,30 @@ export default class EditGarm extends Component {
   };
 
   handleChangePicture = (event) => {
+    const copy = [...this.state.images];
     const value = event.target.value;
 
     if (event.target.id === "picZero") {
-      this.state.images[0] = value;
+      copy[0] = value;
+      this.setState({
+        images: copy,
+      });
+      console.log(copy, "first copy");
     } else if (event.target.id === "picOne") {
-      this.state.images[1] = value;
+      copy[1] = value;
+      this.setState({
+        images: [...copy],
+      });
+      console.log(copy, "second copy");
     } else if (event.target.id === "picTwo") {
-      this.state.images[2] = value;
+      copy[2] = value;
+      this.setState({
+        images: [...copy],
+      });
+      console.log(copy, "final copy");
     } else {
-      this.state.images = [];
+      console.log("somethings wrong dawg");
     }
-
     console.log(this.state.images);
   };
 
