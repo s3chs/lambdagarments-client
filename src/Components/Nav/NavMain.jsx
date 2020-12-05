@@ -16,7 +16,7 @@ const Nav = styled.nav`
   }
 `;
 
-const NavMain = () => {
+const NavMain = (props) => {
   return (
     <Nav>
       <div className="logo">

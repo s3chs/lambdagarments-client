@@ -3,6 +3,8 @@ import Home from "./Pages/Home";
 import Clothes from "./Pages/Clothes";
 import AddGarm from "./Pages/AddGarm";
 import OneGarm from "./Pages/OneGarm";
+import Signup from "./Pages/Signup";
+import Signin from "./Pages/Signin";
 import EditGarm from "./Pages/EditGarm";
 import { Route, Switch } from "react-router-dom";
 
@@ -15,8 +17,9 @@ function App() {
         <Route exact path="/clothes" component={Clothes} />
         <Route exact path="/clothes/add" component={AddGarm} />
         <Route exact path="/clothes/:id" component={OneGarm} />
-        {/* <Route exact path="/delete" component={DeleteGarm}/> */}
-        <Route exact path="/clothes/:id/edit" component={EditGarm}/>
+        <Route exact path="/signup" component={Signup} />
+        <Route exact path="/signin" component={Signin} />
+        <Route exact path="/clothes/:id/edit" component={EditGarm} />
       </Switch>
     </div>
   );

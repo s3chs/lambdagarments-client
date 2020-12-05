@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import apiHandler from "../api/apiHandler";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import WithAuth from "../Auth/WithAuth";
 
-export default class OneGarm extends Component {
+class OneGarm extends Component {
   state = {
     clothes: null,
     index: 0,
   };
 
   componentDidMount() {
+    // console.log(this.props);
+    console.log(this.props.authContext);
     apiHandler
       .getOne(this.props.match.params.id)
       .then((apiResponse) => {
@@ -30,6 +33,9 @@ export default class OneGarm extends Component {
   };
 
   render() {
+    const { context } = this.props;
+    console.log(this.props.authContext);
+
     return (
       <div>
         {this.state.clothes && (
@@ -38,11 +44,19 @@ export default class OneGarm extends Component {
               src={this.state.clothes.images[this.state.index]}
               alt="garm-pic"
             />
-            <Link to={`/clothes/${this.state.clothes._id}/edit`}>EDIT</Link>
-            <button onClick={this.deleteClothes}> DELETE</button>
+            {this.props.authContext.user && (
+              <>
+                {" "}
+                <Link to={`/clothes/${this.state.clothes._id}/edit`}>EDIT</Link>
+                <button onClick={this.deleteClothes}> DELETE</button>{" "}
+              </>
+            )}
+            {/* <Link to={`/clothes/${this.state.clothes._id}/edit`}>EDIT</Link>
+            <button onClick={this.deleteClothes}> DELETE</button> */}
           </React.Fragment>
         )}
       </div>
     );
   }
 }
+export default WithAuth(OneGarm);
