@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import apiHandler from "../api/apiHandler";
 import { Link } from "react-router-dom";
+import "../Styles/Clothes.css";
 
 export default class Clothes extends Component {
   state = {
@@ -25,17 +26,31 @@ export default class Clothes extends Component {
   render() {
     return (
       <div>
-        {this.state.clothes.map((garment) => (
-          <div>
-            <Link key={garment.name} to={`/clothes/${garment._id}`}>
-              <img
-                style={{ maxWidth: 130 }}
-                src={garment.images[0]}    
-                alt="garm-pic"
-              />
-            </Link>
-          </div>
-        ))}
+        <p className="lambda-adjustments">λ λ λ</p>
+        <div className="flex-title">
+          <h1 className="section-title">Thrift Shop</h1>
+        </div>
+        <p className="lambda-adjustments">λ λ λ</p>
+        <div className="grid-container">
+          {this.state.clothes.map((garment) => (
+            <div className="card">
+              <Link
+                key={garment.name}
+                to={`/clothes/${garment._id}`}
+                className="column-container"
+              >
+                <img
+                  className="garm-pic"
+                  src={garment.images[0]}
+                  alt="garm-pic"
+                />
+                <p className="clothes-text"> {garment.name} </p>
+
+                <p className="clothes-text"> Size: {garment.size}</p>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }

@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap"); */
+
+.one-garm-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.one-garm-pic {
+  max-width: 580px;
+  margin-top: 75px;
+}
+
+.garm-pics {
+  display: flex;
+  flex-direction: column;
+}
+
+.position-fixed {
+  width: 1000px;
+}
+
+.garm-info {
+  padding-top: 300px;
+  width: 500px;
+  position: fixed;
+}
+
+.garm-info h2 {
+  font-family: "IBM Plex Serif", serif;
+}
+
+.garm-info h3 {
+  font-family: "IBM Plex Serif", serif;
+  padding-top: 15px;
+  text-justify: center;
+}
+
+.measurements {
+  border-top: 4px solid black;
+  margin: 0px 330px 0px 0px;
+  padding-bottom:5px ;
+}
+
+.social-icon {
+max-width: 70px;
+padding-top: 15px;
+}
