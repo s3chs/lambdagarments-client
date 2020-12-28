@@ -41,20 +41,13 @@ const RightNav = ({ open }) => {
     <Ul open={open}>
       <li>
         <Link to="/clothes" style={{ textDecoration: 'none' }}>
-          <h3>Thrift Shop</h3>
+          <h3>Thrift</h3>
         </Link>
       </li>
       <li>
         {" "}
         <Link to="/clothes/add" style={{ textDecoration: 'none' }}>
           <h3>Add Garm</h3>
-        </Link>
-      </li>
-      <li>
-        {" "}
-        <Link style={{ textDecoration: 'none' }}>
-          {" "}
-          <h3>Update Garm</h3>
         </Link>
       </li>
       <li>

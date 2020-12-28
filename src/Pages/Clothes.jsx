@@ -28,7 +28,7 @@ export default class Clothes extends Component {
       <div>
         <p className="lambda-adjustments">λ λ λ</p>
         <div className="flex-title">
-          <h1 className="section-title">Thrift Shop</h1>
+          <h1 className="section-title">Thrift</h1>
         </div>
         <p className="lambda-adjustments">λ λ λ</p>
         <div className="grid-container">

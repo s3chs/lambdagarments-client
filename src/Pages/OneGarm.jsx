@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import apiHandler from "../api/apiHandler";
 import { Link } from "react-router-dom";
 import WithAuth from "../Auth/WithAuth";
-// import InstaIcon from "../icons/instagram-icon-white-on-black-circle.png";
+import InstaIcon from "../icons/instagram-icon-white-on-black-circle.png";
 // import MailIcon from "../icons/mail.png";
 
 import "../Styles/OneGarm.css";
@@ -78,18 +78,18 @@ class OneGarm extends Component {
                 <br />
                 <h3 className="measurements">Measurements</h3>
                 <h3>Pit to pit: {this.state.clothes.pittopit} </h3>
-                <h3>Collar to Bottom {this.state.clothes.coltobot} </h3>
+                <h3>Collar to Bottom: {this.state.clothes.coltobot} </h3>
                 <br />
                 <br />
                 <p>λ λ λ λ λ λ</p>
                 <br />
-                {/* <a href="https://www.instagram.com/lambdagarments/">
+                <a href="https://www.instagram.com/lambdagarments/">
                   <img
                     className="social-icon"
                     src={InstaIcon}
                     alt="instagram-icon"
                   />
-                </a> */}
+                </a>
                 {/* <Link>
                   <img
                     className="social-icon"
