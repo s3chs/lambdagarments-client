@@ -7,6 +7,10 @@
   margin: 20px 0px;
 }
 
+.boy {
+max-width: 170px;
+margin-bottom: 40px ;
+}
 
 .flex-title {
 display: flex;
@@ -102,7 +106,7 @@ justify-content: center;
 }
 
 .garm-pic {
-  max-width: 390px;
+  max-width: 360px;
   /* max-height: 640px; */
 }
 
@@ -236,7 +240,14 @@ justify-content: center;
   
   
   }
-  
+
+  @media screen and (max-width: 768px) {
+
+  .boy {
+    max-width: 110px;
+    margin-bottom: 30px ;
+    }
+  }
   
 @media screen and (max-width: 420px) {
 
@@ -294,14 +305,6 @@ justify-content: center;
   }
 
   
-  }
-
-  @media screen and (max-width: 420px) {
-    .garm-pic {
-      max-width: 300px;
-      /* max-height: 640px; */
-    }
-
   }
 
   

@@ -1,4 +1,6 @@
 import NavMain from "./Components/Nav/NavMain";
+import PixelNav from "./Components/PixelNav";
+import Footer from "./Components/Footer";
 import Home from "./Pages/Home";
 import Clothes from "./Pages/Clothes";
 import AddGarm from "./Pages/AddGarm";
@@ -12,6 +14,7 @@ function App() {
   return (
     <div>
       <NavMain />
+      <PixelNav />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/clothes" component={Clothes} />
@@ -21,6 +24,7 @@ function App() {
         <Route exact path="/signin" component={Signin} />
         <Route exact path="/clothes/:id/edit" component={EditGarm} />
       </Switch>
+      <Footer />
     </div>
   );
 }

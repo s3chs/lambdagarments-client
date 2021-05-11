@@ -13,7 +13,7 @@ class AuthProvider extends Component {
     apiAuth
       .isLoggedIn()
       .then((data) => {
-        console.log(data, "c la data")
+        // console.log(data, "c la data")
         this.setState({ user: data, isLoading: false });
       })
       .catch(() => {
@@ -36,7 +36,7 @@ class AuthProvider extends Component {
   };
 
   render() {
-    console.log(this.state)
+    // console.log(this.state)
     return (
       <AuthContext.Provider
         value={{

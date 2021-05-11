@@ -1,0 +1,58 @@
+.pixel-nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: repeat-y;
+  background-repeat: repeat;
+  overflow-x: hidden;
+  animation-name: scroll;
+  animation-duration: 80s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  background-position: 0 0;
+}
+
+.pixel-nav-one {
+  max-height: 80px;
+}
+
+.pixel-nav-two {
+  max-width: 160px;
+}
+
+.garment-nav {
+  max-height: 130px;
+  background-repeat: repeat-y;
+  background-repeat: repeat;
+  overflow-x: hidden;
+  animation-name: scroll;
+  animation-duration: 80s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  background-position: 0 0;
+}
+
+@keyframes scroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1000vh 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pixel-nav-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: stretch;
+  }
+
+  .pixel-nav-one {
+    max-height: 80px;
+    display: none;
+  }
+}

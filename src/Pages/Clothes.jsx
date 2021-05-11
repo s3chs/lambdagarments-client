@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, Image } from "react";
 import apiHandler from "../api/apiHandler";
 import { Link } from "react-router-dom";
 import "../Styles/Clothes.css";
+import AfterNavTwo from '../icons/lambdaneontrois.png'
 
 export default class Clothes extends Component {
   state = {
@@ -26,11 +27,13 @@ export default class Clothes extends Component {
   render() {
     return (
       <div>
-        <p className="lambda-adjustments">λ λ λ</p>
+        {/* <p className="lambda-adjustments">λ λ λ</p> */}
+        
         <div className="flex-title">
-          <h1 className="section-title">Thrift</h1>
+        <img src={AfterNavTwo} alt="dawg" className="boy"/>
+         
         </div>
-        <p className="lambda-adjustments">λ λ λ</p>
+        {/* <p className="lambda-adjustments">λ λ λ</p> */}
         <div className="grid-container">
           {this.state.clothes.map((garment) => (
             <div className="card">

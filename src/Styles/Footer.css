@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300&display=swap");
+
+.footer {
+  margin-top: 200px;
+  border-top: 1px solid black;
+  height: 70px;
+  font-family: "IBM Plex Serif", serif;
+  position: relative;
+}
+
+.footer h5 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.footer-icon {
+  max-width: 35px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
